@@ -12,7 +12,7 @@ export default function Confirm({discardId, setDiscardId}){
     setDiscardId(null);
   }
  
-  return <div className = 'w-[100vw] h-[100vh] bg-[#00000070] absolute top-0 left-0 flex justify-center items-center'>
+  return <div className = 'w-[100vw] h-[100vh] bg-[#00000070] fixed top-0 left-0 flex justify-center items-center'>
     <div className = 'bg-white text-black p-5 rounded-lg flex flex-col items-center gap-5'>
       <p onClick = {() => setDiscardId(null)}className = 'w-full flex justify-end'><GoXCircle className = 'size-6 absolute text-red-400'/></p>
       <p className = 'opacity-50 text-xs'>Delete transaction</p>
