@@ -69,7 +69,7 @@ export default function Ui({toggle, setData, data, editId , setEditId}){
     dispatch(fetchTransactions());
   }
   
-  return <div className = 'w-[100vw] h-[100vh] flex items-center justify-center bg-[#00000070] fixed'><div className = 'flex flex-col justify-center items-center gap-5 w-8/12 p-4 shadow-lg rounded-lg my-5 bg-white overflow-hidden absolute top-40'>
+  return <div className = 'w-[100vw] h-[100vh] flex items-center justify-center bg-[#00000070] top-0 left-0 fixed'><div className = 'flex flex-col justify-center items-center gap-5 w-8/12 p-4 shadow-lg rounded-lg my-5 bg-white overflow-hidden absolute top-40'>
     <p className = 'text-xs opacity-50'>{
       editId && data ? 'Update transaction' : 'Add transaction'
     }</p>
