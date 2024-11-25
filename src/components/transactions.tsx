@@ -30,13 +30,13 @@ export default function Transactions({toggle, setEditId, setData}){
         <p >Type</p>
         <p >Date</p>
       </div> : null
+    }{
+            discardId !== null ? <Confirm discardId = {discardId} setDiscardId = {setDiscardId}/> : null
     }
     {
        data && data.length ? data?.map(transaction => {
         return <div key = {transaction?.id} className = ' w-full grid grid-cols-5 p-2 my-2 border-2 border-gray-500 items-center text-left text-xs rounded-lg'>
-          {
-            discardId !== null ? <Confirm discardId = {discardId} setDiscardId = {setDiscardId}/> : null
-          }
+          
           <p className = {`truncate ${transaction?.desc === 'No desc' ? 'opacity-30' : ''}`}>{transaction?.desc}</p>
           <p>$ {transaction?.amount}</p>
           <p>{transaction?.type?.charAt(0)?.toUpperCase() + transaction?.type?.substring(1)}</p>
